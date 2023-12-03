@@ -8,6 +8,10 @@ My attempt at the Advent of Code 2023, while using/learning Python.
 - **Status:** Completed
 - **Started at:** 02 December 2023, 20:00
 - **Finished at:** 02 December 2023, ~23:30
+- **Time taken:** 3 hours and 30 minutes.
 
 ### Part 2
 - **Status:** Ongoing
+- **Started at:** 03 December 2023, 10:10 
+- **Finished at:** 
+- **Time taken:** 
