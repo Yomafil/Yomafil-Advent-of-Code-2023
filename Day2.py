@@ -103,9 +103,10 @@ game_doc = game_doc.replace(";", ",")
 
 game_doc = game_doc.split("\n")
 
-# game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
+game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
 
 final_num = 0
+
 
 for line in game_doc:
     
@@ -119,17 +120,39 @@ for line in game_doc:
         
         print(pair)
 
-        if color == "blue" and int(count) > 14:
-            game_count = 0
+        # if color == "blue" and int(count) > 14:
+        #     game_count = 0
+        #     # game_dict["blue"] += int(count)
+
+        # elif color == "red" and int(count) > 12:
+        #     game_count = 0
+        #     # game_dict["red"] += int(count)
+
+        # elif color == "green" and int(count) > 13:
+        #     game_count = 0
+            # game_dict["green"] += int(count)
+        count = int(count)
+        print(count, color)
+        if color == "blue" and count > game_dict["blue"]:
+            game_dict["blue"] = count
+            print(game_dict["blue"])
+
             # game_dict["blue"] += int(count)
 
-        elif color == "red" and int(count) > 12:
-            game_count = 0
+        elif color == "red" and count > game_dict["red"]:
+            game_dict["red"] = count
+
             # game_dict["red"] += int(count)
 
-        elif color == "green" and int(count) > 13:
-            game_count = 0
+        elif color == "green" and count > game_dict["green"]:
+            game_dict["green"] = count
+
             # game_dict["green"] += int(count)
+        
+
+    game_count = game_dict["blue"] * game_dict["red"] * game_dict["green"]
+
+    print(game_count, "=", game_dict["blue"], "*", game_dict["red"], "*", game_dict["green"])
 
     final_num += int(game_count) 
 
@@ -138,17 +161,17 @@ for line in game_doc:
     # game_dict["red"] += int(line)
     # game_dict["green"] += int(line)
 
-    # print(game_dict)
-    # if game_dict["red"] <= 12 and game_dict["green"] <= 13 and game_dict["blue"] <= 14:
-    #     final_num += game_dict["Game"]
-    #     game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
+    print(game_dict)
+    if game_dict["red"] <= 12 and game_dict["green"] <= 13 and game_dict["blue"] <= 14:
+        final_num += game_dict["Game"]
+        game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
 
-    # else:
-    #     game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
+    else:
+        game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
 
 
 
-# print(game_dict)
+print(game_dict)
 
 print("Final number is:", final_num)
 

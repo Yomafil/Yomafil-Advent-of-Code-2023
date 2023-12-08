@@ -1170,7 +1170,7 @@ pdrss6oneone4fournine
 #         calib_doc = calib_doc.replace("eight", "8")
 #     elif prev_char == "n" and char == "i":
 #         calib_doc = calib_doc.replace("nine", "9")
-
+### Part 2
 dup_calib_doc = calib_doc
 
 # Replace the linked numbers starting from the left

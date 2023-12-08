@@ -27,7 +27,7 @@ My attempt at the Advent of Code 2023, while using/learning Python.
 - **Time taken:** 1 Day, 1 hour and 6 minutes.
 
 ### Part 2
-- **Status:** OnGoing
-- **Started at:** 
-- **Finished at:** 
-- **Time taken:** 
+- **Status:** Completed
+- **Started at:** 07 December 2023, ~22:19
+- **Finished at:** 08 December 2023, 13:50
+- **Time taken:** 15 hours and 31 minutes.
