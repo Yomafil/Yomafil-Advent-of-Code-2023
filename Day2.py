@@ -111,57 +111,33 @@ final_num = 0
 for line in game_doc:
     
     game_str, color_pair = line.split(":")
-    # count, color = color_pair.split(",")
     dump, game_count = game_str.split(" ")
     print(game_count)
 
     for pair in color_pair.split(","):
         dump, count, color = pair.split(" ")
-        
         print(pair)
 
-        # if color == "blue" and int(count) > 14:
-        #     game_count = 0
-        #     # game_dict["blue"] += int(count)
-
-        # elif color == "red" and int(count) > 12:
-        #     game_count = 0
-        #     # game_dict["red"] += int(count)
-
-        # elif color == "green" and int(count) > 13:
-        #     game_count = 0
-            # game_dict["green"] += int(count)
         count = int(count)
         print(count, color)
+
         if color == "blue" and count > game_dict["blue"]:
             game_dict["blue"] = count
             print(game_dict["blue"])
 
-            # game_dict["blue"] += int(count)
-
         elif color == "red" and count > game_dict["red"]:
             game_dict["red"] = count
 
-            # game_dict["red"] += int(count)
-
         elif color == "green" and count > game_dict["green"]:
             game_dict["green"] = count
-
-            # game_dict["green"] += int(count)
         
-
     game_count = game_dict["blue"] * game_dict["red"] * game_dict["green"]
 
     print(game_count, "=", game_dict["blue"], "*", game_dict["red"], "*", game_dict["green"])
 
     final_num += int(game_count) 
-
-    # game_dict["game"] = int(line)
-    # game_dict["blue"] += int(line)
-    # game_dict["red"] += int(line)
-    # game_dict["green"] += int(line)
-
     print(game_dict)
+
     if game_dict["red"] <= 12 and game_dict["green"] <= 13 and game_dict["blue"] <= 14:
         final_num += game_dict["Game"]
         game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
@@ -169,47 +145,6 @@ for line in game_doc:
     else:
         game_dict = {"Game": 0, "blue": 0, "red": 0, "green": 0}
 
-
-
 print(game_dict)
 
 print("Final number is:", final_num)
-
-
-
-
-
-
-
-# input_string = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
-
-# # Initialize an empty dictionary to store color counts
-# color_counts = {"blue": 0, "red": 0, "green": 0}
-
-# # Split the input string into individual games
-# games = input_string.split(";")
-
-# games = str(games).split(":")
-# # Iterate through each game
-# for game in games:
-#     # Split each game into individual color-count pairs
-#     color_pairs = game.split(",")
-    
-#     # Iterate through each color-count pair
-#     for pair in color_pairs:
-#         print(pair)
-
-#         if pair.strip().split() == (str, int):
-#             pass
-#         # Split the pair into count and color
-#         count, color = pair.strip().split()
-        
-#         # Add the count to the corresponding color in the dictionary
-#         color_counts[color] += int(count)
-
-# # Add the game number to the dictionary
-# color_counts["game"] = int(input_string.split(":")[1].split()[0])
-
-# # Print the final dictionary
-# print(color_counts)
-
